@@ -28,8 +28,10 @@ def OLS(x, y):
 
     return b0,b1
 
-x = [1, 2, 3, 4, 5]
-y = [2, 4, 5, 4, 5]
+# Create random dataset
+np.random.seed(0)
+x = np.random.rand(100,1)
+y = 2 + 3*x + np.random.rand(100,1)
 
 b0,b1 = OLS(x, y)
 
